@@ -14,7 +14,8 @@ int main()
     vector<string> names;
     int V;
     cout<<"How many destination points would you like to add? ";
-    cin<<temp;
+    cin>>temp;
+    cin.ignore()
     V=temp;
     
    cout<<"please add labels for each destination points"<<endl;
