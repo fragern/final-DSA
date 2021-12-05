@@ -6,10 +6,13 @@ using namespace std;
 int main()
 {
     List list;
-
-    // How many vertex that the graph has
-    int V = 5;
-
+    int temp;
+  
+    int V;
+    cout<<"How many destination points would you like to add? ";
+    cin<<temp;
+    V=temp;
+  
     // Create a graph
     vector<int> arr[V];
 
