@@ -15,7 +15,7 @@ int main()
     int V;
     cout<<"How many destination points would you like to add? ";
     cin>>temp;
-    cin.ignore()
+    cin.ignore();
     V=temp;
     
    cout<<"please add labels for each destination points"<<endl;
