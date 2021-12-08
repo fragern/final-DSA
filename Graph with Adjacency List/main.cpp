@@ -9,8 +9,7 @@ int main()
     int temp;
     int a;
     int b;
-    int t;
-    int distance;
+    int time;
     string tempo;
     vector<string> names;
     int V;
@@ -40,9 +39,9 @@ int main()
     // Create a graph
     vector<int> arr[V];
 
-    while (a != 999 && b != 999 && distance != 999)
+    while (a != 999 && b != 999 && time != 999)
     {
-        list.push(arr, a, b, distance);
+        list.push(arr, a, b, time);
     }
     list.printGraph(arr, V);
 }
