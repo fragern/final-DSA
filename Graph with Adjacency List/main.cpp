@@ -33,11 +33,11 @@ int main()
         cout << "Destination Point Number " << j + 1 << ": " << names[j] << endl;
     }
 
-    cout << "Please enter estimated time taken (t) to go from point a to z in the format : a b t" << endl;
+    cout << "Please enter estimated time taken (t) to go from point a to b in the format : a b t" << endl;
     cout << "to stop putting data in type 999 999 999" << endl;
 
     // Create a graph
-    vector<pair<int,int> arr[V];
+    vector<pair<int,int>> arr[V];
 
     while (a != 999 && b != 999 && time != 999)
     {
