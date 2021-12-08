@@ -41,6 +41,7 @@ int main()
 
     while (a != 999 && b != 999 && time != 999)
     {
+    	cin >> a >> b >> time;
         list.push(arr, a, b, time);
     }
     list.printGraph(arr, V);
