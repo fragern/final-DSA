@@ -27,3 +27,35 @@ void List::printGraph(vector<pair<int, int>> array[], int V)
         cout << endl;
     }
 }
+
+void List:: min_time(int time[], bool visited[]){
+    int min = INT_MAX, index = 0;
+    for(int i = 0; i < V; i++){
+        if(time[i] <= min && visited[i] == false){
+            min = time[i];
+            index = i;
+        }
+    }
+    return index;
+}
+
+void List:: dijkstra(vector<pair<int, int>> array, int s){
+    int time[V];
+    bool visited[V];
+    for(int i = 0; i < V; i++){
+        time[i] = INT_MAX;
+    }
+    time[s] = 0;
+    for(int i = 0; i < V; i++){
+        int u = min_time(time, visited);
+        visited[u] = true;
+        for(list <pair<int, int>> :: iterator it = array[i].begin(); it != array[i].end(); it++){
+            if(visited[it->first] == false && time[u] != INT_MAX && time[it->first] > time[u] + it->second){
+                time[it->first] = time[u] + it->second;
+            }
+        }
+    }
+    for(int i = 0; i < V; i++){
+        cout << "1 --> " << i << " --> " << time[i] << endl;
+    }
+}
