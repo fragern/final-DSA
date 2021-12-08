@@ -14,6 +14,7 @@ void List::push(vector<pair<int, int>> array[], int a, int b, int time)
 
 void List::printGraph(vector<pair<int, int>> array[], int V)
 {
+    int x, w;
     for (int i = 0; i < V; i++)
     {
         cout << endl
