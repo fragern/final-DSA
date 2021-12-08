@@ -5,8 +5,8 @@ using namespace std;
 
 void List::push(vector<int> array[], int a, int b, int dist)
 {
-    array[a].push_back(b);
-    array[b].push_back(a);
+    array[a].push_back(make_pair(b, dist);
+    array[b].push_back(make_pair(a, dist);
 
     // setting up the distance of dijkstra
     this->dist = dist;
