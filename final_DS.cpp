@@ -19,6 +19,7 @@ public:
 void DijkstraAdjList::addEdge(list<pair<int, int>> *adjList, int start, int finish, int time)
 {
     adjList[start].push_back(make_pair(finish, time));
+    adjList[finish].push_back(make_pair(start, time));
 }
 
 void DijkstraAdjList::dijkstra(list<pair<int, int>> *adjList, int var)
