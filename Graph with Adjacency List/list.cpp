@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void List::push(vector<pair<int, int> array[], int a, int b, int time)
+void List::push(vector<pair<int, int>> array[], int a, int b, int time)
 {
     array[a].push_back(make_pair(b, time);
     array[b].push_back(make_pair(a, time);
@@ -12,7 +12,7 @@ void List::push(vector<pair<int, int> array[], int a, int b, int time)
     this->time = time;
 }
 
-void List::printGraph(vector<pair<int, int> array[], int V)
+void List::printGraph(vector<pair<int, int>> array[], int V)
 {
     for (int i = 0; i < V; i++)
     {
