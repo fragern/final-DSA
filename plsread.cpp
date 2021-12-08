@@ -6,8 +6,8 @@ class DijkstraAdjList
 {
 public:
     void addEdge(list<pair<int, int>> *adjList, int start, int finish, int time);
-    void dijkstra(list<pair<int, int>> *adjList, int var);
-    int minDistance(int dist[], bool visited[]);
+    void dijkstra(list<pair<int, int>> *adjList, int var, int inp);
+    int minDistance(int dist[], bool visited[], int inp);
 
     list<pair<int, int>> *adjList;
     int start;
@@ -21,33 +21,33 @@ void DijkstraAdjList::addEdge(list<pair<int, int>> *adjList, int start, int fini
     adjList[start].push_back(make_pair(finish, time));
 }
 
-void DijkstraAdjList::dijkstra(list<pair<int, int>> *adjList, int var)
+void DijkstraAdjList::dijkstra(list<pair<int, int>> *adjList, int var, int inp)
 {
-    int dist[5];
-    bool visited[5] = {};
+    int dist[inp];
+    bool visited[inp] = {};
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < inp; i++)
         dist[i] = INT_MAX;
 
     dist[var] = 0;
 
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i <inp-1; i++)
     {
-        int start = minDistance(dist, visited);
+        int start = minDistance(dist, visited, inp);
         visited[start] = true;
         for (list<pair<int, int>>::iterator it = adjList[start].begin(); it != adjList[start].end(); it++)
             if (visited[it->first] == false && dist[start] != INT_MAX && dist[it->first] > dist[start] + it->second)
                 dist[it->first] = dist[start] + it->second;
     }
-    for (int i = 0; i < 5; i++)
-        cout << "0 --> " << i << " ---> " << dist[i] << endl;
+    for (int i = 0; i < inp; i++)
+        cout << "1 --> " << i+1 << " takes " << dist[i] <<" mins"<< endl;
 }
 
-int DijkstraAdjList::minDistance(int dist[], bool visited[])
+int DijkstraAdjList::minDistance(int dist[], bool visited[], int inp)
 {
     int min = INT_MAX, index = 0;
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < inp; i++)
     {
         if (dist[i] <= min && visited[i] == false)
         {
@@ -107,12 +107,12 @@ int main()
         }
         else
         {
-            dijk.addEdge(adjList, a, b, t);
+            dijk.addEdge(adjList, a-1, b-1, t);
         }
     }
     cout << "Please enter from where would you want to go: ";
     cin>>s;
 
 
-    dijk.dijkstra(adjList, s);
+    dijk.dijkstra(adjList, s-1, V);
 }
