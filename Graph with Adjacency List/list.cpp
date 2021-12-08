@@ -5,8 +5,8 @@ using namespace std;
 
 void List::push(vector<pair<int, int>> array[], int a, int b, int time)
 {
-    array[a].push_back(make_pair(b, time);
-    array[b].push_back(make_pair(a, time);
+    array[a].push_back(make_pair(b, time));
+    array[b].push_back(make_pair(a, time));
 
     // setting up the distance of dijkstra
     this->time = time;
