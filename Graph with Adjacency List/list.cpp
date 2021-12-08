@@ -18,7 +18,7 @@ void List::printGraph(vector<pair<int, int> array[], int V)
     {
         cout << endl
              << "Vertex " << i << ":";
-        for (auto x : array[i].begin(); x!=array[i].end(); x++)
+        for (auto x=array[i].begin(); x!=array[i].end(); x++)
         {
             n = x->first;
             w = x->second;
