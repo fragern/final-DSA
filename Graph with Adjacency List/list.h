@@ -9,7 +9,7 @@ class List
 public:
     void push(vector<pair<int, int>> array[], int a, int b, int time);
     void printGraph(vector<pair<int, int>> array[], int V);
-	void Dijkstra(vector<pair<int, int>> array[], int s)
+	void Dijkstra(vector<pair<int, int>> array[], int s);
     int a;
     int b;
     int time;
