@@ -37,7 +37,7 @@ int main()
     cout << "to stop putting data in type 999 999 999" << endl;
 
     // Create a graph
-    vector<pair<int,int> arr[V];
+    vector<pair<int,int>> arr[V];
 
     while (a != 999 && b != 999 && time != 999)
     {
