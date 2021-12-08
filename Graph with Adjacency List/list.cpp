@@ -3,16 +3,16 @@
 
 using namespace std;
 
-void List::push(vector<int> array[], int a, int b, int dist)
+void List::push(vector<pair<int, int> array[], int a, int b, int time)
 {
-    array[a].push_back(make_pair(b, dist);
-    array[b].push_back(make_pair(a, dist);
+    array[a].push_back(make_pair(b, time);
+    array[b].push_back(make_pair(a, time);
 
     // setting up the distance of dijkstra
-    this->dist = dist;
+    this->time = time;
 }
 
-void List::printGraph(vector<int> array[], int V)
+void List::printGraph(vector<pair<int, int> array[], int V)
 {
     for (int i = 0; i < V; i++)
     {
